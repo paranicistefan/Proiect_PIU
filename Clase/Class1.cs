@@ -38,7 +38,7 @@ namespace Clase
             venitAnual = Convert.ToInt32(date[5]);
             buget = Convert.ToInt32(date[6]);
         }
-        string Nume, Prenume, adresa, judet;
+        string Nume, Prenume, adresa;
         int CNP, venitAnual,buget,id;
     }
 }

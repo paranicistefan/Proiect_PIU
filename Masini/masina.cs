@@ -40,7 +40,7 @@ namespace Masini
         }
         public string afisare()
         {
-            return $"{id}   {Fabricant}\t{Model}\t{anFabricatie}\t{Echipare}\t\t{Kilometraj} KM \t{Pret} EUR";
+            return $"{id}   {Fabricant}\t{Model}\t{anFabricatie}\t\t{Echipare}\t\t{Kilometraj} KM \t{Pret} EUR";
         }
     }
 }

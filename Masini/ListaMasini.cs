@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Masini
 {
-    class ListaMasini
+    public class ListaMasini
     {
         List<masina> masini = new List<masina>();
         public ListaMasini()
@@ -38,9 +38,9 @@ namespace Masini
             if (verificare == false)
                 return;
             Console.WriteLine("Introduceti id-ul primei masini\nR:");
-            masina1 = Convert.ToInt32(Console.Read());
+            masina1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Introduceti id-ul  masinei nr 2\nR:");
-            masina2 = Convert.ToInt32(Console.Read());
+            masina2 = Convert.ToInt32(Console.ReadLine());
             masini[masina1 - 1].afisare();
             masini[masina1 - 1].afisare();
         }

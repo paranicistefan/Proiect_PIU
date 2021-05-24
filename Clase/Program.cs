@@ -1,5 +1,6 @@
 ﻿using System;
-using 
+using Clienti;
+using Masini;
 using System.Collections.Generic;
 
 namespace Clase
@@ -10,6 +11,7 @@ namespace Clase
         {
             int x;
             ListaMasini masini = new ListaMasini();
+            ListaClienti clienti = new ListaClienti();
             while(true)
             {
                 Console.Clear();
@@ -25,14 +27,21 @@ namespace Clase
                         Console.ReadKey();
                         break;
                     case 3:
+                        clienti.add();
                         break;
                     case 4:
+                        clienti.show();
+                        Console.ReadKey();
                         break;
                     case 5:
                         masini.compare();
                         Console.ReadKey();
                         break;
                     case 6:
+                        clienti.compare();
+                        Console.ReadKey();
+                        break;
+                    case 7:
                         return;
                     default:
                         Console.WriteLine("A-ti gresit optiunea");

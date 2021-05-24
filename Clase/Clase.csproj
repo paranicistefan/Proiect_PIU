@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Clienti\Clienti.csproj" />
+    <ProjectReference Include="..\Masini\Masini.csproj" />
+    <ProjectReference Include="..\NivelAccesDate\NivelAccesDate.csproj" />
+  </ItemGroup>
+
 </Project>

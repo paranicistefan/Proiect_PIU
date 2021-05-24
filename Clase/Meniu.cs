@@ -13,7 +13,8 @@ namespace Clase
             Console.WriteLine("3. Adauga un client");
             Console.WriteLine("4. Afiseaza toti Clientii");
             Console.WriteLine("5. Compara 2 masini");
-            Console.WriteLine("6. Exit");
+            Console.WriteLine("6. Compara 2 clienti");
+            Console.WriteLine("7. Exit");
             Console.WriteLine("Ce facem ?\nR:");
         }
     }

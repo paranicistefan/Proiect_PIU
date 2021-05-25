@@ -11,10 +11,17 @@ namespace Masini
         {
 
         }
-        public void add()
+        public masina add()
         {
-            masini.Add(new masina());
+            masina noua = new masina();
+            masini.Add(noua);
             masini[masini.Count - 1].id = masini.Count;
+            noua.id = masini.Count;
+            return noua;
+        }
+        public void addFile(masina M)
+        {
+            masini.Add(M);
         }
         public bool show()
         {

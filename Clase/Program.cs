@@ -1,6 +1,7 @@
 ﻿using System;
 using Clienti;
 using Masini;
+using NivelAccesDate;
 using System.Collections.Generic;
 
 namespace Clase
@@ -10,7 +11,11 @@ namespace Clase
         static void Main(string[] args)
         {
             int x;
+
+            IStocareDate masiniSalvate = StocareFactory.GetAdministratorStocare();
+
             ListaMasini masini = new ListaMasini();
+            masini = masiniSalvate.GetMasini();
             ListaClienti clienti = new ListaClienti();
             while(true)
             {
@@ -20,7 +25,7 @@ namespace Clase
                 switch (x)
                 {
                     case 1:
-                        masini.add();
+                        masiniSalvate.AddMasina(masini.add());
                         break;
                     case 2:
                         masini.show();

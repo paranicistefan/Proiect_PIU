@@ -44,6 +44,7 @@ namespace Interfata
             this.lblSerie = new System.Windows.Forms.Label();
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.lblTelefon = new System.Windows.Forms.Label();
+            this.errLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtAdresa
@@ -54,6 +55,7 @@ namespace Interfata
             this.txtAdresa.PlaceholderText = "Introduceti adresa dvs";
             this.txtAdresa.Size = new System.Drawing.Size(257, 30);
             this.txtAdresa.TabIndex = 20;
+            this.txtAdresa.TextChanged += new System.EventHandler(this.txtAdresa_TextChanged);
             // 
             // lblAdresa
             // 
@@ -83,6 +85,7 @@ namespace Interfata
             this.txtPrenume.PlaceholderText = "Introduceti Prenumele";
             this.txtPrenume.Size = new System.Drawing.Size(257, 30);
             this.txtPrenume.TabIndex = 17;
+            this.txtPrenume.TextChanged += new System.EventHandler(this.txtPrenume_TextChanged);
             // 
             // lblPrenume
             // 
@@ -98,6 +101,7 @@ namespace Interfata
             // 
             this.lblNume.AutoSize = true;
             this.lblNume.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblNume.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblNume.Location = new System.Drawing.Point(33, 117);
             this.lblNume.Name = "lblNume";
             this.lblNume.Size = new System.Drawing.Size(71, 28);
@@ -130,6 +134,7 @@ namespace Interfata
             this.txtNume.PlaceholderText = "Introduceti Numele";
             this.txtNume.Size = new System.Drawing.Size(257, 30);
             this.txtNume.TabIndex = 28;
+            this.txtNume.TextChanged += new System.EventHandler(this.txtNume_TextChanged);
             // 
             // txtCNP
             // 
@@ -139,6 +144,7 @@ namespace Interfata
             this.txtCNP.PlaceholderText = "Introduceti CNP-ul";
             this.txtCNP.Size = new System.Drawing.Size(257, 30);
             this.txtCNP.TabIndex = 29;
+            this.txtCNP.TextChanged += new System.EventHandler(this.txtCNP_TextChanged);
             // 
             // btnAdaugaClient
             // 
@@ -158,6 +164,7 @@ namespace Interfata
             this.txtSerie.PlaceholderText = "Introduceti Seria de buletin";
             this.txtSerie.Size = new System.Drawing.Size(257, 30);
             this.txtSerie.TabIndex = 32;
+            this.txtSerie.TextChanged += new System.EventHandler(this.txtSerie_TextChanged);
             // 
             // lblSerie
             // 
@@ -177,6 +184,7 @@ namespace Interfata
             this.txtTelefon.PlaceholderText = "Introduceti telefonul dvs";
             this.txtTelefon.Size = new System.Drawing.Size(257, 30);
             this.txtTelefon.TabIndex = 34;
+            this.txtTelefon.TextChanged += new System.EventHandler(this.txtTelefon_TextChanged);
             // 
             // lblTelefon
             // 
@@ -188,11 +196,24 @@ namespace Interfata
             this.lblTelefon.TabIndex = 33;
             this.lblTelefon.Text = "Telefon";
             // 
+            // errLabel
+            // 
+            this.errLabel.AutoSize = true;
+            this.errLabel.Font = new System.Drawing.Font("Sitka Subheading", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.errLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.errLabel.Location = new System.Drawing.Point(229, 387);
+            this.errLabel.Name = "errLabel";
+            this.errLabel.Size = new System.Drawing.Size(347, 26);
+            this.errLabel.TabIndex = 35;
+            this.errLabel.Text = "**Completati Campurle marcate cu rosu";
+            this.errLabel.Visible = false;
+            // 
             // Adaugare_Clienti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 515);
+            this.Controls.Add(this.errLabel);
             this.Controls.Add(this.txtTelefon);
             this.Controls.Add(this.lblTelefon);
             this.Controls.Add(this.txtSerie);
@@ -231,5 +252,6 @@ namespace Interfata
         private System.Windows.Forms.Label lblSerie;
         private System.Windows.Forms.TextBox txtTelefon;
         private System.Windows.Forms.Label lblTelefon;
+        private System.Windows.Forms.Label errLabel;
     }
 }

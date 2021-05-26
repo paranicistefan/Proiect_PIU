@@ -42,6 +42,7 @@ namespace Interfata
             this.txtEchipare = new System.Windows.Forms.TextBox();
             this.lblEchpare = new System.Windows.Forms.Label();
             this.btnAdaugaMasina = new System.Windows.Forms.Button();
+            this.errLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblFabricant
@@ -128,6 +129,7 @@ namespace Interfata
             this.txtFabricant.Size = new System.Drawing.Size(259, 30);
             this.txtFabricant.TabIndex = 2;
             this.txtFabricant.Text = "Selectati un fabricant";
+            this.txtFabricant.SelectedIndexChanged += new System.EventHandler(this.txtFabricant_SelectedIndexChanged);
             // 
             // lblModel
             // 
@@ -147,6 +149,7 @@ namespace Interfata
             this.txtModel.PlaceholderText = "Introduceti modelul";
             this.txtModel.Size = new System.Drawing.Size(257, 30);
             this.txtModel.TabIndex = 4;
+            this.txtModel.TextChanged += new System.EventHandler(this.txtModel_TextChanged_1);
             // 
             // lblAnFarbicatie
             // 
@@ -166,6 +169,7 @@ namespace Interfata
             this.txtKilometraj.PlaceholderText = "Reali, plz";
             this.txtKilometraj.Size = new System.Drawing.Size(257, 30);
             this.txtKilometraj.TabIndex = 8;
+            this.txtKilometraj.TextChanged += new System.EventHandler(this.txtKilometraj_TextChanged);
             // 
             // lblKilometraj
             // 
@@ -185,6 +189,7 @@ namespace Interfata
             this.txtPret.PlaceholderText = "Introduceti pretul";
             this.txtPret.Size = new System.Drawing.Size(257, 30);
             this.txtPret.TabIndex = 10;
+            this.txtPret.TextChanged += new System.EventHandler(this.txtPret_TextChanged);
             // 
             // lblPret
             // 
@@ -268,6 +273,7 @@ namespace Interfata
             this.txtAnFarbicatie.Size = new System.Drawing.Size(259, 30);
             this.txtAnFarbicatie.TabIndex = 11;
             this.txtAnFarbicatie.Text = "Selectati anul de fabricatie";
+            this.txtAnFarbicatie.SelectedIndexChanged += new System.EventHandler(this.txtAnFarbicatie_SelectedIndexChanged);
             // 
             // txtEchipare
             // 
@@ -277,6 +283,7 @@ namespace Interfata
             this.txtEchipare.PlaceholderText = "fara \"Full fara trapa\"";
             this.txtEchipare.Size = new System.Drawing.Size(257, 30);
             this.txtEchipare.TabIndex = 13;
+            this.txtEchipare.TextChanged += new System.EventHandler(this.txtEchipare_TextChanged);
             // 
             // lblEchpare
             // 
@@ -298,11 +305,24 @@ namespace Interfata
             this.btnAdaugaMasina.UseVisualStyleBackColor = true;
             this.btnAdaugaMasina.Click += new System.EventHandler(this.btnAdaugaMasina_Click);
             // 
+            // errLabel
+            // 
+            this.errLabel.AutoSize = true;
+            this.errLabel.Font = new System.Drawing.Font("Sitka Subheading", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.errLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.errLabel.Location = new System.Drawing.Point(687, 555);
+            this.errLabel.Name = "errLabel";
+            this.errLabel.Size = new System.Drawing.Size(347, 26);
+            this.errLabel.TabIndex = 36;
+            this.errLabel.Text = "**Completati Campurle marcate cu rosu";
+            this.errLabel.Visible = false;
+            // 
             // Adaugare_Masina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1068, 590);
+            this.Controls.Add(this.errLabel);
             this.Controls.Add(this.btnAdaugaMasina);
             this.Controls.Add(this.txtEchipare);
             this.Controls.Add(this.lblEchpare);
@@ -338,5 +358,6 @@ namespace Interfata
         private System.Windows.Forms.TextBox txtEchipare;
         private System.Windows.Forms.Label lblEchpare;
         private System.Windows.Forms.Button btnAdaugaMasina;
+        private System.Windows.Forms.Label errLabel;
     }
 }

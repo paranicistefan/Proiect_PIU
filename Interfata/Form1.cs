@@ -14,6 +14,7 @@ namespace Interfata
 {
     public partial class Form1 : Form
     {
+        int optiune;
         ListaMasini Masini;
         ListaClienti Clienti;
         public Form1(ListaMasini M,ListaClienti C)
@@ -23,6 +24,8 @@ namespace Interfata
             InitializeComponent();
             car.Click += new EventHandler(car_Click);
             client.Click += new EventHandler(client_Click);
+            clientE.Click += new EventHandler(clientE_Click);
+            carE.Click += new EventHandler(carE_Click);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,6 +43,7 @@ namespace Interfata
             {
                 listBox.Items.Add(curent.afisare());
             }
+            optiune = 0;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -61,6 +65,18 @@ namespace Interfata
             Adaugare_Clienti x = new Adaugare_Clienti(Clienti);
             x.ShowDialog();
         }
+        private void clientE_Click(object sender, EventArgs e)
+        {
+            btnClient_Click(0,e);
+            listBox.Items.Add("-----Selectati Elementul ce dorit sa fie modificat-------");
+            optiune = 1;
+        }
+        private void carE_Click(object sender, EventArgs e)
+        {
+            button1_Click(0, e);
+            listBox.Items.Add("-----Selectati Elementul ce dorit sa fie modificat-------");
+            optiune = 2;
+        }
         private void btnClient_Click(object sender, EventArgs e)
         {
             listBox.Items.Clear();
@@ -75,6 +91,21 @@ namespace Interfata
             foreach (client curent in listaClienti)
             {
                 listBox.Items.Add(curent.afisare());
+            }
+            optiune = 0;
+        }
+
+        private void listBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(optiune==1)
+            {
+                Modificare_Client x = new Modificare_Client(Clienti,listBox.SelectedIndex);
+                x.ShowDialog();
+            }
+            if (optiune == 2)
+            {
+                Modificare_Masina x = new Modificare_Masina(Masini, listBox.SelectedIndex);
+                x.ShowDialog();
             }
         }
     }

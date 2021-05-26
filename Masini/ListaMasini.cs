@@ -29,6 +29,10 @@ namespace Masini
         {
             return masini.Find(x => x.id == id);
         }
+        public void modify(masina Modificat, int id)
+        {
+            masini[id - 1] = Modificat;
+        }
         public void compare()
         {
             //bool verificare;

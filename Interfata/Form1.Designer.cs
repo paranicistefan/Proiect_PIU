@@ -64,6 +64,8 @@ namespace Interfata
             this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carE = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientE = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,6 +125,9 @@ namespace Interfata
             // 
             // edit
             // 
+            this.edit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.carE,
+            this.clientE});
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(82, 29);
             this.edit.Text = "Editare";
@@ -146,6 +151,7 @@ namespace Interfata
             this.listBox.Size = new System.Drawing.Size(1229, 504);
             this.listBox.TabIndex = 4;
             this.listBox.Visible = false;
+            this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
             // contentsToolStripMenuItem
             // 
@@ -316,6 +322,18 @@ namespace Interfata
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
+            // carE
+            // 
+            this.carE.Name = "carE";
+            this.carE.Size = new System.Drawing.Size(170, 34);
+            this.carE.Text = "Masina";
+            // 
+            // clientE
+            // 
+            this.clientE.Name = "clientE";
+            this.clientE.Size = new System.Drawing.Size(170, 34);
+            this.clientE.Text = "Client";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -371,6 +389,8 @@ namespace Interfata
         private System.Windows.Forms.ToolStripMenuItem printPreviewToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem carE;
+        private System.Windows.Forms.ToolStripMenuItem clientE;
     }
 }
 

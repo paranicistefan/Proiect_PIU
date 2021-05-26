@@ -19,10 +19,11 @@ namespace Masini
             id = Convert.ToInt32(date[0]);
             Fabricant = date[1];
             Model = date[2];
-            Kilometraj = Convert.ToInt32(date[3]);
+            anFabricatie= Convert.ToInt32(date[3]);
             Echipare = date[4];
-            Pret = Convert.ToInt32(date[5]);
-            anFabricatie= Convert.ToInt32(date[6]);
+            Kilometraj = Convert.ToInt32(date[5]);
+            Pret = Convert.ToInt32(date[6]);
+            
         }
         public masina()
         {

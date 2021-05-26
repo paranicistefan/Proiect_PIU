@@ -25,6 +25,10 @@ namespace Clienti
         {
             return Clienti;
         }
+        public void modify(client Modificat,int id)
+        {
+            Clienti[id-1] = Modificat;
+        }
         public client find(int id)
         {
             return Clienti.Find(x => x.id == id);

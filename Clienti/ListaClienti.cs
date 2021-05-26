@@ -11,27 +11,23 @@ namespace Clienti
         {
 
         }
-        public void add()
+        public void add(client nou)
         {
-            Clienti.Add(new client());
+            Clienti.Add(nou);
             Clienti[Clienti.Count - 1].id = Clienti.Count;
+            nou.id = Clienti.Count;
         }
-        public bool show()
+        public List<client> show()
         {
-            if (Clienti.Count == 0)
-            {
-                Console.WriteLine("Nu ai nici-un client introdus");
-                return false;
-            }
-            Console.WriteLine($"ID   Nume\tPrenume\tCNP\tAdresa\t\tVenit anual[EUR]   \tBuget");
-            foreach (client curent in Clienti)
-            {
-                Console.WriteLine(curent.afisare());
-            }
-            return true;
+            return Clienti;
+        }
+        public client find(int id)
+        {
+            return Clienti.Find(x => x.id == id);
         }
         public void compare()
         {
+            /*
             bool verificare;
             int client1 = 0, client2 = 0;
             verificare = show();
@@ -43,6 +39,7 @@ namespace Clienti
             client2 = Convert.ToInt32(Console.ReadLine());
             Clienti[client1 - 1].afisare();
             Clienti[client1 - 1].afisare();
+            */
         }
     }
 }

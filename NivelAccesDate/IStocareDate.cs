@@ -7,7 +7,7 @@ namespace NivelAccesDate
 {
     public interface IStocareDate
     {
-        void AddMasina(masina m);
+        void SaveMasini(ListaMasini lista);
         public ListaMasini GetMasini();
 
     }

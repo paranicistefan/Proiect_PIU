@@ -12,36 +12,31 @@ namespace Clienti
         public string Prenume { get; set; }
         public string CNP { get; set; }
         public string Adresa { get; set; }
-        public int venitAnual { get; set; }
-        public int Buget { get; set; }
-        public client(string[] date)
+        public string Serie { get; set; }
+        public string Telefon { get; set; }
+        public client(string input)
         {
+            string[] date = input.Split(";");
             id = Convert.ToInt32(date[0]);
             Nume = date[1];
             Prenume = date[2];
             CNP = date[3];
-            Adresa = date[4];
-            venitAnual = Convert.ToInt32(date[5]);
-            Buget = Convert.ToInt32(date[6]);
+            Serie = date[4];
+            Adresa = date[5];
+            Telefon = date[6];
+
         }
         public client()
         {
-            Console.Write("Ce Nume are Clientul ?\nR:");
-            Nume = Console.ReadLine();
-            Console.Write("Ce Prenume are Clientul ?\nR:");
-            Prenume = Console.ReadLine();
-            Console.Write("Care este CNP-ul clientului ?\nR:");
-            CNP = Console.ReadLine();
-            Console.Write("Ce adresa are clientul ?\nR:");
-            Adresa = Console.ReadLine();
-            Console.Write("Care este venitul anual al clientului ?\nR:");
-            venitAnual = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Ce buget are clientul, pentru achizitia unei masini ?\nR:");
-            Buget= Convert.ToInt32(Console.ReadLine());
+
         }
         public string afisare()
         {
-            return $"{id}   {Nume}\t{Prenume}\t{CNP}\t\t{Adresa}\t\t{venitAnual} EUR \t{Buget} EUR";
+            return $"{id}   {Nume}\t{Prenume}\t{CNP}\t\t{Serie}\t\t{Adresa}\t{Telefon}";
+        }
+        public string scriere_inFisier()
+        {
+            return $"{id};{Nume};{Prenume};{CNP};{Serie};{Adresa};{Telefon};";
         }
     }
 }

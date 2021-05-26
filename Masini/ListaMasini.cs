@@ -11,39 +11,31 @@ namespace Masini
         {
 
         }
-        public masina add()
-        {
-            masina noua = new masina();
+        public void add(masina noua)
+        { 
             masini.Add(noua);
             masini[masini.Count - 1].id = masini.Count;
             noua.id = masini.Count;
-            return noua;
         }
         public void addFile(masina M)
         {
             masini.Add(M);
         }
-        public bool show()
+        public List<masina> show()
         {
-            if(masini.Count==0)
-            {
-                Console.WriteLine("Nu ai nici-o masina introdusa");
-                return false;
-            }
-            Console.WriteLine($"ID   Fabricant\tModel\tanFabricatie\tEchipare\t\tkilometri   \tpret");
-            foreach (masina curent in masini)
-            {
-                Console.WriteLine(curent.afisare());
-            }
-            return true;
+            return masini;
+        }
+        public masina find (int id)
+        {
+            return masini.Find(x => x.id == id);
         }
         public void compare()
         {
-            bool verificare;
+            //bool verificare;
             int masina1=0, masina2=0;
-            verificare=show();
-            if (verificare == false)
-                return;
+            //verificare=show();
+           // if (verificare == false)
+              //  return;
             Console.WriteLine("Introduceti id-ul primei masini\nR:");
             masina1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Introduceti id-ul  masinei nr 2\nR:");

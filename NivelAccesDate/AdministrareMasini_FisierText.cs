@@ -17,15 +17,21 @@ namespace NivelAccesDate
             Stream sFisierText = File.Open(numeFisier, FileMode.OpenOrCreate);
             sFisierText.Close();
         }
-        public void AddMasina(masina m)
+        public void SaveMasini(ListaMasini lista)
         {
             try
             {
+                Stream sFisierText = File.Open(NumeFisier, FileMode.Create);
+                sFisierText.Close();
+                List<masina> l = lista.show();
                 //instructiunea 'using' va apela la final swFisierText.Close();
                 //al doilea parametru setat la 'true' al constructorului StreamWriter indica modul 'append' de deschidere al fisierului
-                using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
+                foreach(masina m in l)
                 {
-                    swFisierText.WriteLine(m.scriere_inFisier());
+                    using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
+                    {
+                        swFisierText.WriteLine(m.scriere_inFisier());
+                    }
                 }
             }
             catch (IOException eIO)

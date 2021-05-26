@@ -26,18 +26,7 @@ namespace Masini
         }
         public masina()
         {
-            Console.Write("Ce marca este masina ?\nR:");
-            Fabricant = Console.ReadLine();
-            Console.Write("Ce Model este ?\nR:");
-            Model = Console.ReadLine();
-            Console.Write("Ce echipare este ?\nR:");
-            Echipare = Console.ReadLine();
-            Console.Write("Cati kilometrii are masina ?\nR:");
-            Kilometraj = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Din ce an este masina ?\nR:");
-            anFabricatie = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Care este pretul masinii(in euro) ?\nR:");
-            Pret = Convert.ToInt32(Console.ReadLine());
+
         }
         public string afisare()
         {

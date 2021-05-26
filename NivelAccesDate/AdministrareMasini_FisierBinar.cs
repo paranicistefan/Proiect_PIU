@@ -14,7 +14,7 @@ namespace NivelAccesDate
             this.NumeFisier = NumeFisier;
         }
 
-        public void AddMasina(masina m)
+        public void SaveMasini(ListaMasini lista)
         {
             throw new Exception("Optiunea AddStudent nu este implementata");
         }

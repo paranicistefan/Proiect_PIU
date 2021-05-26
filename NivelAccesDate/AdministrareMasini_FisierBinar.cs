@@ -1,5 +1,6 @@
 ﻿using System;
 using Masini;
+using Clienti;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
@@ -16,12 +17,21 @@ namespace NivelAccesDate
 
         public void SaveMasini(ListaMasini lista)
         {
-            throw new Exception("Optiunea AddStudent nu este implementata");
+            throw new Exception("Optiunea SaveMasini nu este implementata");
         }
 
         public ListaMasini GetMasini()
         {
-            throw new Exception("Optiunea GetStudenti nu este implementata");
+            throw new Exception("Optiunea GetMasini nu este implementata");
+        }
+
+        public ListaClienti GetClienti()
+        {
+            throw new Exception("Optiunea GetMasini nu este implementata");
+        }
+        public void SaveClienti(ListaClienti lista)
+        {
+            throw new Exception("Optiunea SaveMasini nu este implementata");
         }
     }
 }

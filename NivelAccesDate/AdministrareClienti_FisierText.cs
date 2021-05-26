@@ -1,33 +1,32 @@
 ﻿using System;
-using Masini;
 using Clienti;
+using Masini;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
 namespace NivelAccesDate
 {
-    //clasa AdministrareStudenti_FisierText implementeaza interfata IStocareData
-    public class AdministrareMasini_FisierText : IStocareDate
+    public class AdministrareClienti_FisierText : IStocareDate
     {
         string NumeFisier { get; set; }
 
-        public AdministrareMasini_FisierText (string numeFisier)
+        public AdministrareClienti_FisierText(string numeFisier)
         {
             this.NumeFisier = numeFisier;
             Stream sFisierText = File.Open(numeFisier, FileMode.OpenOrCreate);
             sFisierText.Close();
         }
-        public void SaveMasini(ListaMasini lista)
+        public void SaveClienti(ListaClienti lista)
         {
             try
             {
                 Stream sFisierText = File.Open(NumeFisier, FileMode.Create);
                 sFisierText.Close();
-                List<masina> l = lista.show();
+                List<client> l = lista.show();
                 //instructiunea 'using' va apela la final swFisierText.Close();
                 //al doilea parametru setat la 'true' al constructorului StreamWriter indica modul 'append' de deschidere al fisierului
-                foreach(masina m in l)
+                foreach (client m in l)
                 {
                     using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
                     {
@@ -45,9 +44,9 @@ namespace NivelAccesDate
             }
         }
 
-        public ListaMasini GetMasini()
+        public ListaClienti GetClienti()
         {
-            ListaMasini masini_dinFisier = new ListaMasini();
+            ListaClienti clienti_dinFisier = new ListaClienti();
             try
             {
                 // instructiunea 'using' va apela sr.Close()
@@ -58,8 +57,8 @@ namespace NivelAccesDate
                     //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
                     while ((line = sr.ReadLine()) != null)
                     {
-                        masina masinaDinFisier = new masina(line);
-                        masini_dinFisier.addFile(masinaDinFisier);
+                        client clientDinFisier = new client(line);
+                        clienti_dinFisier.addFile(clientDinFisier);
                     }
                 }
             }
@@ -72,15 +71,16 @@ namespace NivelAccesDate
                 throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
             }
 
-            return masini_dinFisier;
+            return clienti_dinFisier;
         }
-        public ListaClienti GetClienti()
-        {
-            throw new Exception("Optiunea GetMasini nu este implementata");
-        }
-        public void SaveClienti(ListaClienti lista)
+        public void SaveMasini(ListaMasini lista)
         {
             throw new Exception("Optiunea SaveMasini nu este implementata");
+        }
+
+        public ListaMasini GetMasini()
+        {
+            throw new Exception("Optiunea GetMasini nu este implementata");
         }
     }
 }

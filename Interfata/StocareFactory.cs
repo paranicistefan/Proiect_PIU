@@ -8,12 +8,11 @@ namespace Interfata
 {
     public static class StocareFactory
     {
-        private const string FORMAT_SALVARE = "FormatSalvare";
-        private const string NUME_FISIER = "NumeFisier";
-        public static IStocareDate GetAdministratorStocare()
+        public static IStocareDate GetAdministratorStocare(int tip)
         {
-            var formatSalvare = ConfigurationManager.AppSettings[FORMAT_SALVARE];
-            var numeFisier = ConfigurationManager.AppSettings[NUME_FISIER];
+            var formatSalvare = ConfigurationManager.AppSettings["FormatSalvare"];
+            var numeFisier = ConfigurationManager.AppSettings["NumeFisier"];
+            var numeFisierC = ConfigurationManager.AppSettings["NumeFisierC"];
             if (formatSalvare != null)
             {
                 switch (formatSalvare)
@@ -22,7 +21,10 @@ namespace Interfata
                     case "bin":
                         return new AdministrareMasini_FisierBinar (numeFisier + "." + formatSalvare);
                     case "txt":
-                        return new AdministrareMasini_FisierText (numeFisier + "." + formatSalvare);
+                        if(tip==1)
+                            return new AdministrareMasini_FisierText (numeFisier + "." + formatSalvare);
+                        else
+                            return new AdministrareClienti_FisierText(numeFisierC + "." + formatSalvare);
                 }
             }
 

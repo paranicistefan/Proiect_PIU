@@ -17,6 +17,10 @@ namespace Clienti
             Clienti[Clienti.Count - 1].id = Clienti.Count;
             nou.id = Clienti.Count;
         }
+        public void addFile(client C)
+        {
+            Clienti.Add(C);
+        }
         public List<client> show()
         {
             return Clienti;

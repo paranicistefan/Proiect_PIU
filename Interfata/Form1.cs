@@ -17,11 +17,14 @@ namespace Interfata
         int optiune;
         ListaMasini Masini;
         ListaClienti Clienti;
+        DateTime dataActualizare = new DateTime();
         public Form1(ListaMasini M,ListaClienti C)
         {
             Masini = M;
             Clienti = C;
             InitializeComponent();
+            dataActualizare = DateTime.Now;
+            lblTime.Text = dataActualizare.ToString();
             car.Click += new EventHandler(car_Click);
             client.Click += new EventHandler(client_Click);
             clientE.Click += new EventHandler(clientE_Click);
@@ -112,6 +115,12 @@ namespace Interfata
                 DetaliiMasina x = new DetaliiMasina(Masini.find(listBox.SelectedIndex));
                 x.ShowDialog();
             }
+        }
+
+        private void btnActualizare_Click(object sender, EventArgs e)
+        {
+            dataActualizare = DateTime.Now;
+            lblTime.Text = dataActualizare.ToString();
         }
     }
 }

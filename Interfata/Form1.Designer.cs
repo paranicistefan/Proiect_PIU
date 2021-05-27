@@ -37,6 +37,8 @@ namespace Interfata
             this.car = new System.Windows.Forms.ToolStripMenuItem();
             this.client = new System.Windows.Forms.ToolStripMenuItem();
             this.edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.carE = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientE = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox = new System.Windows.Forms.ListBox();
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,8 +66,8 @@ namespace Interfata
             this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.carE = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientE = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnActualizare = new System.Windows.Forms.Button();
+            this.lblTime = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,6 +133,18 @@ namespace Interfata
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(82, 29);
             this.edit.Text = "Editare";
+            // 
+            // carE
+            // 
+            this.carE.Name = "carE";
+            this.carE.Size = new System.Drawing.Size(170, 34);
+            this.carE.Text = "Masina";
+            // 
+            // clientE
+            // 
+            this.clientE.Name = "clientE";
+            this.clientE.Size = new System.Drawing.Size(170, 34);
+            this.clientE.Text = "Client";
             // 
             // label1
             // 
@@ -322,23 +336,33 @@ namespace Interfata
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
-            // carE
+            // btnActualizare
             // 
-            this.carE.Name = "carE";
-            this.carE.Size = new System.Drawing.Size(170, 34);
-            this.carE.Text = "Masina";
+            this.btnActualizare.Location = new System.Drawing.Point(765, 50);
+            this.btnActualizare.Name = "btnActualizare";
+            this.btnActualizare.Size = new System.Drawing.Size(128, 42);
+            this.btnActualizare.TabIndex = 6;
+            this.btnActualizare.Text = "Actualizare";
+            this.btnActualizare.UseVisualStyleBackColor = true;
+            this.btnActualizare.Click += new System.EventHandler(this.btnActualizare_Click);
             // 
-            // clientE
+            // lblTime
             // 
-            this.clientE.Name = "clientE";
-            this.clientE.Size = new System.Drawing.Size(170, 34);
-            this.clientE.Text = "Client";
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTime.Location = new System.Drawing.Point(342, 54);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(100, 33);
+            this.lblTime.TabIndex = 5;
+            this.lblTime.Text = "lblTime";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1256, 653);
+            this.Controls.Add(this.btnActualizare);
+            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClient);
@@ -391,6 +415,8 @@ namespace Interfata
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carE;
         private System.Windows.Forms.ToolStripMenuItem clientE;
+        private System.Windows.Forms.Button btnActualizare;
+        private System.Windows.Forms.Label lblTime;
     }
 }
 

@@ -31,77 +31,76 @@ namespace Interfata
                 chScaune.Checked=true;
             if (modificat.PachetSport == true)
                 chPachet.Checked = true;
-            //ramas
-            if (chSenzori.Checked)
-                modificat.SenzoriParcare = true;
-            if (chFaruri.Checked)
-                modificat.FariuriAutomate = true;
-            if (chCruise.Checked)
-                modificat.CriuseControl = true;
+            if (modificat.SenzoriParcare == true)
+                chSenzori.Checked = true;
+            if (modificat.FariuriAutomate == true)
+                chFaruri.Checked = true;
+            if (modificat.CriuseControl == true)
+                chCruise.Checked = true;
 
-            if (rdbAlb.Checked)
-                modificat.culoare = Culoare.Alb;
-            if (rdbAlbastru.Checked)
-                modificat.culoare = Culoare.Albastru;
-            if (rdbGalben.Checked)
-                modificat.culoare = Culoare.galben;
-            if (rdbGri.Checked)
-                modificat.culoare = Culoare.Gri;
-            if (rdbRosu.Checked)
-                modificat.culoare = Culoare.Rosu;
-            if (rdbVerde.Checked)
-                modificat.culoare = Culoare.Verde;
-            if (rdbNegru.Checked)
-                modificat.culoare = Culoare.Negru;
-            if (rdbMaro.Checked)
-                modificat.culoare = Culoare.maro;
+            if (modificat.culoare == Culoare.Alb)
+                rdbAlb.Checked = true;
+            if (modificat.culoare == Culoare.Albastru)
+                rdbAlbastru.Checked = true;
+            if (modificat.culoare == Culoare.galben)
+                rdbGalben.Checked = true;
+            if (modificat.culoare == Culoare.Gri)
+                rdbGri.Checked = true;
+            if (modificat.culoare == Culoare.Rosu)
+                rdbRosu.Checked = true;
+            if (modificat.culoare == Culoare.Verde)
+                rdbVerde.Checked = true;
+            if (modificat.culoare == Culoare.Negru)
+                rdbNegru.Checked = true;
+            if (modificat.culoare == Culoare.maro)
+                rdbMaro.Checked = true;
 
-            if (rdbManual.Checked)
-                modificat.cv = CutiiViteze.Manuala;
-            if (rdbAuto.Checked)
-                modificat.cv = CutiiViteze.Automata;
+            if (modificat.cv == CutiiViteze.Manuala)
+                rdbManual.Checked = true;
+            if (modificat.cv == CutiiViteze.Automata)
+                rdbAuto.Checked = true;
 
-            if (rdbHatch.Checked)
-                modificat.caroserie = Caroserii.Hatchback;
-            if (rdbSedan.Checked)
-                modificat.caroserie = Caroserii.Sedan;
-            if (rdbSUV.Checked)
-                modificat.caroserie = Caroserii.SUV;
-            if (rdbMPV.Checked)
-                modificat.caroserie = Caroserii.Monovolum;
-            if (rdbCoupe.Checked)
-                modificat.caroserie = Caroserii.Coupe;
-            if (rdbCabrio.Checked)
-                modificat.caroserie = Caroserii.Cabrio;
-            if (rdbBreak.Checked)
-                modificat.caroserie = Caroserii.Break;
+            if (modificat.caroserie == Caroserii.Hatchback)
+                rdbHatch.Checked = true;
+            if (modificat.caroserie == Caroserii.Sedan)
+                rdbSedan.Checked = true;
+            if (modificat.caroserie == Caroserii.SUV)
+                rdbSUV.Checked = true;
+            if (modificat.caroserie == Caroserii.Monovolum)
+                rdbMPV.Checked = true;
+            if (modificat.caroserie == Caroserii.Coupe)
+                rdbCoupe.Checked = true;
+            if (modificat.caroserie == Caroserii.Cabrio)
+                rdbCabrio.Checked = true;
+            if (modificat.caroserie == Caroserii.Break)
+                rdbBreak.Checked = true;
 
-            if (rdbRob.Checked)
-                modificat.aer = AerConditionat.Manual;
-            if (rdbClima.Checked)
-                modificat.aer = AerConditionat.Climiatronic;
-            if (rdbClima2.Checked)
-                modificat.aer = AerConditionat.Climatronic_2_Zone;
-            if (rdbClima3.Checked)
-                modificat.aer = AerConditionat.Climatronic_3_Zone;
-            if (rdbClima4.Checked)
-                modificat.aer = AerConditionat.Climatronic_4_Zone;
+            if (modificat.aer == AerConditionat.Manual)
+                rdbRob.Checked = true;
+            if (modificat.aer == AerConditionat.Climiatronic)
+                rdbClima.Checked = true;
+            if (modificat.aer == AerConditionat.Climatronic_2_Zone)
+                rdbClima2.Checked = true;
+            if (modificat.aer == AerConditionat.Climatronic_3_Zone)
+                rdbClima3.Checked = true;
+            if (modificat.aer == AerConditionat.Climatronic_4_Zone)
+                rdbClima4.Checked = true;
 
-            if (rdbBenzina.Checked)
-                modificat.fuel = Combustibili.Benzina;
-            if (rdbDiesel.Checked)
-                modificat.fuel = Combustibili.Diesel;
-            if (rdbHybrid.Checked)
-                modificat.fuel = Combustibili.Hybrid;
-            if (rdbElectric.Checked)
-                modificat.fuel = Combustibili.Electric;
+            if (modificat.fuel == Combustibili.Benzina)
+                rdbBenzina.Checked = true;
+            if (modificat.fuel == Combustibili.Diesel)
+                rdbDiesel.Checked = true;
+            if (modificat.fuel == Combustibili.Hybrid)
+                rdbHybrid.Checked = true;
+            if (modificat.fuel == Combustibili.Electric)
+                rdbElectric.Checked = true;
 
-            if (rdbManivela.Checked)
-                modificat.geamuri = GeamuriElectrice.Nope;
-            if (rdbCheala.Checked)
-                modificat.geamuri = GeamuriElectrice.Fata;
-            if (rdbFS.Checked)
-                modificat.geamuri = GeamuriElectrice.Fata_Spate;
+            if (modificat.geamuri == GeamuriElectrice.Nope)
+                rdbManivela.Checked = true;
+            if (modificat.geamuri == GeamuriElectrice.Fata)
+                rdbCheala.Checked = true;
+            if (modificat.geamuri == GeamuriElectrice.Fata_Spate)
+                rdbFS.Checked = true;
 
         }
 

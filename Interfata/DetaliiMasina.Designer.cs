@@ -194,9 +194,9 @@ namespace Interfata
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOp1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblOp1.Location = new System.Drawing.Point(228, 377);
+            this.lblOp1.Location = new System.Drawing.Point(213, 377);
             this.lblOp1.Name = "lblOp1";
-            this.lblOp1.Size = new System.Drawing.Size(216, 38);
+            this.lblOp1.Size = new System.Drawing.Size(231, 38);
             this.lblOp1.TabIndex = 13;
             this.lblOp1.Text = "4 zone";
             this.lblOp1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -228,6 +228,9 @@ namespace Interfata
             // 
             // lblOp3
             // 
+            this.lblOp3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOp3.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblOp3.Location = new System.Drawing.Point(93, 480);
             this.lblOp3.Name = "lblOp3";
@@ -239,6 +242,9 @@ namespace Interfata
             // 
             // lblOp4
             // 
+            this.lblOp4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOp4.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblOp4.Location = new System.Drawing.Point(131, 531);
             this.lblOp4.Name = "lblOp4";
@@ -250,6 +256,9 @@ namespace Interfata
             // 
             // lblOp5
             // 
+            this.lblOp5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOp5.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblOp5.Location = new System.Drawing.Point(131, 582);
             this.lblOp5.Name = "lblOp5";
@@ -261,6 +270,9 @@ namespace Interfata
             // 
             // lblOp6
             // 
+            this.lblOp6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOp6.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblOp6.Location = new System.Drawing.Point(131, 634);
             this.lblOp6.Name = "lblOp6";

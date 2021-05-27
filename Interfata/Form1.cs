@@ -46,6 +46,7 @@ namespace Interfata
             {
                 listBox.Items.Add(curent.afisare());
             }
+            listBox.Items.Add("-----Selectati o masina pentru a vedea mai multe detalii-------");
             optiune = 3;
         }
 
@@ -95,7 +96,7 @@ namespace Interfata
             {
                 listBox.Items.Add(curent.afisare());
             }
-            optiune = 0;
+            optiune = 4;
         }
 
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -121,6 +122,12 @@ namespace Interfata
         {
             dataActualizare = DateTime.Now;
             lblTime.Text = dataActualizare.ToString();
+        }
+
+        private void btnGrid_Click(object sender, EventArgs e)
+        {
+            DataGrid x = new DataGrid(Masini,Clienti,optiune);
+            x.ShowDialog();
         }
     }
 }

@@ -43,7 +43,7 @@ namespace Interfata
             {
                 listBox.Items.Add(curent.afisare());
             }
-            optiune = 0;
+            optiune = 3;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -105,6 +105,11 @@ namespace Interfata
             if (optiune == 2)
             {
                 Modificare_Masina x = new Modificare_Masina(Masini, listBox.SelectedIndex);
+                x.ShowDialog();
+            }
+            if(optiune == 3)
+            {
+                DetaliiMasina x = new DetaliiMasina(Masini.find(listBox.SelectedIndex));
                 x.ShowDialog();
             }
         }

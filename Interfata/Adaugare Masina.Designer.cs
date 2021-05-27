@@ -382,6 +382,7 @@ namespace Interfata
             this.grpCuloare.TabIndex = 37;
             this.grpCuloare.TabStop = false;
             this.grpCuloare.Text = "Culoare";
+            this.grpCuloare.Enter += new System.EventHandler(this.grpCuloare_Enter);
             // 
             // rdbMaro
             // 
@@ -485,6 +486,7 @@ namespace Interfata
             this.grpClima.TabIndex = 38;
             this.grpClima.TabStop = false;
             this.grpClima.Text = "Climatizare";
+            this.grpClima.Enter += new System.EventHandler(this.grpClima_Enter);
             // 
             // rdbClima4
             // 
@@ -552,6 +554,7 @@ namespace Interfata
             this.grpGeamuri.TabIndex = 39;
             this.grpGeamuri.TabStop = false;
             this.grpGeamuri.Text = "Geamuri";
+            this.grpGeamuri.Enter += new System.EventHandler(this.grpGeamuri_Enter);
             // 
             // rdbFS
             // 
@@ -595,12 +598,14 @@ namespace Interfata
             this.grpCaroserie.Controls.Add(this.rdbCoupe);
             this.grpCaroserie.Controls.Add(this.rdbHatch);
             this.grpCaroserie.Controls.Add(this.rdbSedan);
+            this.grpCaroserie.ForeColor = System.Drawing.Color.Black;
             this.grpCaroserie.Location = new System.Drawing.Point(321, 30);
             this.grpCaroserie.Name = "grpCaroserie";
             this.grpCaroserie.Size = new System.Drawing.Size(163, 292);
             this.grpCaroserie.TabIndex = 39;
             this.grpCaroserie.TabStop = false;
             this.grpCaroserie.Text = "Caroserie";
+            this.grpCaroserie.Enter += new System.EventHandler(this.grpCaroserie_Enter);
             // 
             // rdbCabrio
             // 
@@ -689,6 +694,7 @@ namespace Interfata
             this.grpCV.TabIndex = 40;
             this.grpCV.TabStop = false;
             this.grpCV.Text = "Cutie de Viteze";
+            this.grpCV.Enter += new System.EventHandler(this.grpCV_Enter);
             // 
             // rdbAuto
             // 
@@ -711,6 +717,7 @@ namespace Interfata
             this.rdbManual.TabStop = true;
             this.rdbManual.Text = "Manuala";
             this.rdbManual.UseVisualStyleBackColor = true;
+            this.rdbManual.CheckedChanged += new System.EventHandler(this.rdbManual_CheckedChanged);
             // 
             // grpOpt
             // 
@@ -800,6 +807,7 @@ namespace Interfata
             this.grbCombustibil.TabIndex = 39;
             this.grbCombustibil.TabStop = false;
             this.grbCombustibil.Text = "Combustibil";
+            this.grbCombustibil.Enter += new System.EventHandler(this.grbCombustibil_Enter);
             // 
             // rdbElectric
             // 

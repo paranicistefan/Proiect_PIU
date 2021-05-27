@@ -31,6 +31,7 @@ namespace Interfata
         private void btnAdaugaMasina_Click(object sender, EventArgs e)
         {
             int c = 0;
+            masina nou = new masina();
             if (txtFabricant.Text == "Selectati un fabricant")
             {
                 errLabel.Visible = true;
@@ -67,16 +68,7 @@ namespace Interfata
                 lblPret.ForeColor = Color.DarkRed;
                 c++;
             }
-            if (c != 0)
-            {
-                return;
-            }
-            masina nou = new masina { Fabricant = txtFabricant.Text,
-                                      Model = txtModel.Text, 
-                                      anFabricatie =Convert.ToInt32(txtAnFarbicatie.Text), 
-                                      Kilometraj = Convert.ToInt32(txtKilometraj.Text), 
-                                      Echipare = txtEchipare.Text, 
-                                      Pret = Convert.ToInt32(txtPret.Text) };
+
             if (chOglinzi.Checked)
                 nou.OglinziElectrice = true;
             if (chScaune.Checked)
@@ -153,6 +145,53 @@ namespace Interfata
                 nou.geamuri = GeamuriElectrice.Fata;
             if (rdbFS.Checked)
                 nou.geamuri = GeamuriElectrice.Fata_Spate;
+
+            if(nou.culoare == Culoare.Invalid)
+            {
+                errLabel.Visible = true;
+                grpCuloare.ForeColor = Color.DarkRed;
+                c++;
+            }
+            if (nou.aer == AerConditionat.Invalid)
+            {
+                errLabel.Visible = true;
+                grpClima.ForeColor = Color.DarkRed;
+                c++;
+            }
+            if (nou.fuel == Combustibili.Invalid)
+            {
+                errLabel.Visible = true;
+                grbCombustibil.ForeColor = Color.DarkRed;
+                c++;
+            }
+            if (nou.caroserie == Caroserii.Invalid)
+            {
+                errLabel.Visible = true;
+                grpCaroserie.ForeColor = Color.DarkRed;
+                c++;
+            }
+            if (nou.cv == CutiiViteze.Invalid)
+            {
+                errLabel.Visible = true;
+                grpCV.ForeColor = Color.DarkRed;
+                c++;
+            }
+            if (nou.geamuri == GeamuriElectrice.Invalid)
+            {
+                errLabel.Visible = true;
+                grpGeamuri.ForeColor = Color.DarkRed;
+                c++;
+            }
+            if (c != 0)
+            {
+                return;
+            }
+            nou.Fabricant = txtFabricant.Text;
+            nou.Model = txtModel.Text;
+            nou.anFabricatie = Convert.ToInt32(txtAnFarbicatie.Text);
+            nou.Kilometraj = Convert.ToInt32(txtKilometraj.Text);
+            nou.Echipare = txtEchipare.Text;
+            nou.Pret = Convert.ToInt32(txtPret.Text);
             Masini.add(nou);
             this.Close();
         }
@@ -195,6 +234,41 @@ namespace Interfata
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void grpCaroserie_Enter(object sender, EventArgs e)
+        {
+            grpCaroserie.ForeColor = Color.Black;
+        }
+
+        private void rdbManual_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpCV_Enter(object sender, EventArgs e)
+        {
+            grpCV.ForeColor = Color.Black;
+        }
+
+        private void grpCuloare_Enter(object sender, EventArgs e)
+        {
+            grpCuloare.ForeColor = Color.Black;
+        }
+
+        private void grbCombustibil_Enter(object sender, EventArgs e)
+        {
+            grbCombustibil.ForeColor = Color.Black;
+        }
+
+        private void grpClima_Enter(object sender, EventArgs e)
+        {
+            grpClima.ForeColor = Color.Black;
+        }
+
+        private void grpGeamuri_Enter(object sender, EventArgs e)
+        {
+            grpGeamuri.ForeColor = Color.Black;
         }
     }
 }

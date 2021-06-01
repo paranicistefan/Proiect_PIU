@@ -39,6 +39,7 @@ namespace Interfata
             this.edit = new System.Windows.Forms.ToolStripMenuItem();
             this.carE = new System.Windows.Forms.ToolStripMenuItem();
             this.clientE = new System.Windows.Forms.ToolStripMenuItem();
+            this.grid = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox = new System.Windows.Forms.ListBox();
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,7 +69,8 @@ namespace Interfata
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnActualizare = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
-            this.btnGrid = new System.Windows.Forms.Button();
+            this.btnTranzactii = new System.Windows.Forms.Button();
+            this.offer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,11 +86,11 @@ namespace Interfata
             // 
             // btnClient
             // 
-            this.btnClient.Location = new System.Drawing.Point(1028, 42);
+            this.btnClient.Location = new System.Drawing.Point(260, 36);
             this.btnClient.Name = "btnClient";
             this.btnClient.Size = new System.Drawing.Size(216, 71);
             this.btnClient.TabIndex = 1;
-            this.btnClient.Text = "Afisati Clientii";
+            this.btnClient.Text = "Afisati Clientii Firmei";
             this.btnClient.UseVisualStyleBackColor = true;
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
@@ -97,7 +99,8 @@ namespace Interfata
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Add,
-            this.edit});
+            this.edit,
+            this.grid});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1250, 33);
@@ -109,7 +112,8 @@ namespace Interfata
             // 
             this.Add.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.car,
-            this.client});
+            this.client,
+            this.offer});
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(105, 29);
             this.Add.Text = "Adaugare";
@@ -117,13 +121,13 @@ namespace Interfata
             // car
             // 
             this.car.Name = "car";
-            this.car.Size = new System.Drawing.Size(170, 34);
+            this.car.Size = new System.Drawing.Size(190, 34);
             this.car.Text = "Masina";
             // 
             // client
             // 
             this.client.Name = "client";
-            this.client.Size = new System.Drawing.Size(170, 34);
+            this.client.Size = new System.Drawing.Size(190, 34);
             this.client.Text = "Client";
             // 
             // edit
@@ -146,6 +150,12 @@ namespace Interfata
             this.clientE.Name = "clientE";
             this.clientE.Size = new System.Drawing.Size(170, 34);
             this.clientE.Text = "Client";
+            // 
+            // grid
+            // 
+            this.grid.Name = "grid";
+            this.grid.Size = new System.Drawing.Size(98, 29);
+            this.grid.Text = "GridView";
             // 
             // label1
             // 
@@ -339,7 +349,7 @@ namespace Interfata
             // 
             // btnActualizare
             // 
-            this.btnActualizare.Location = new System.Drawing.Point(907, 78);
+            this.btnActualizare.Location = new System.Drawing.Point(1130, 78);
             this.btnActualizare.Name = "btnActualizare";
             this.btnActualizare.Size = new System.Drawing.Size(105, 35);
             this.btnActualizare.TabIndex = 6;
@@ -351,35 +361,41 @@ namespace Interfata
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTime.Location = new System.Drawing.Point(755, 36);
+            this.lblTime.Location = new System.Drawing.Point(978, 36);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(100, 33);
             this.lblTime.TabIndex = 5;
             this.lblTime.Text = "lblTime";
             // 
-            // btnGrid
+            // btnTranzactii
             // 
-            this.btnGrid.Location = new System.Drawing.Point(274, 36);
-            this.btnGrid.Name = "btnGrid";
-            this.btnGrid.Size = new System.Drawing.Size(204, 71);
-            this.btnGrid.TabIndex = 7;
-            this.btnGrid.Text = "GridView";
-            this.btnGrid.UseVisualStyleBackColor = true;
-            this.btnGrid.Click += new System.EventHandler(this.btnGrid_Click);
+            this.btnTranzactii.Location = new System.Drawing.Point(482, 36);
+            this.btnTranzactii.Name = "btnTranzactii";
+            this.btnTranzactii.Size = new System.Drawing.Size(204, 71);
+            this.btnTranzactii.TabIndex = 8;
+            this.btnTranzactii.Text = "Afisati Tranzactiile";
+            this.btnTranzactii.UseVisualStyleBackColor = true;
+            this.btnTranzactii.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // offer
+            // 
+            this.offer.Name = "offer";
+            this.offer.Size = new System.Drawing.Size(190, 34);
+            this.offer.Text = "Tranzactie";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1250, 649);
-            this.Controls.Add(this.btnGrid);
+            this.Controls.Add(this.btnTranzactii);
             this.Controls.Add(this.btnActualizare);
             this.Controls.Add(this.lblTime);
-            this.Controls.Add(this.listBox);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClient);
             this.Controls.Add(this.btnMasina);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.listBox);
+            this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
@@ -429,7 +445,9 @@ namespace Interfata
         private System.Windows.Forms.ToolStripMenuItem clientE;
         private System.Windows.Forms.Button btnActualizare;
         private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Button btnGrid;
+        private System.Windows.Forms.Button btnTranzactii;
+        private System.Windows.Forms.ToolStripMenuItem grid;
+        private System.Windows.Forms.ToolStripMenuItem offer;
     }
 }
 

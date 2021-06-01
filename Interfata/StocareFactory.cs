@@ -13,6 +13,7 @@ namespace Interfata
             var formatSalvare = ConfigurationManager.AppSettings["FormatSalvare"];
             var numeFisier = ConfigurationManager.AppSettings["NumeFisier"];
             var numeFisierC = ConfigurationManager.AppSettings["NumeFisierC"];
+            var numeFisierT = ConfigurationManager.AppSettings["NumeFisierT"];
             if (formatSalvare != null)
             {
                 switch (formatSalvare)
@@ -21,10 +22,18 @@ namespace Interfata
                     case "bin":
                         return new AdministrareMasini_FisierBinar (numeFisier + "." + formatSalvare);
                     case "txt":
-                        if(tip==1)
-                            return new AdministrareMasini_FisierText (numeFisier + "." + formatSalvare);
-                        else
-                            return new AdministrareClienti_FisierText(numeFisierC + "." + formatSalvare);
+                        switch(tip)
+                        {
+                            case 1:
+                                return new AdministrareMasini_FisierText (numeFisier + "." + formatSalvare);
+                            case 2:
+                                return new AdministrareClienti_FisierText(numeFisierC + "." + formatSalvare);
+                            case 3:
+                                return new AdministrareTranzactii_FisierText(numeFisierT + "." + formatSalvare);
+                            default:
+                                return new AdministrareClienti_FisierText(numeFisierT + "." + formatSalvare); ;
+                        }
+                            
                 }
             }
 

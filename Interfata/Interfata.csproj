@@ -10,6 +10,7 @@
     <ProjectReference Include="..\Clienti\Clienti.csproj" />
     <ProjectReference Include="..\Masini\Masini.csproj" />
     <ProjectReference Include="..\NivelAccesDate\NivelAccesDate.csproj" />
+    <ProjectReference Include="..\Tranzactii\Tranzactii.csproj" />
   </ItemGroup>
 
 </Project>

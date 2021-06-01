@@ -17,6 +17,10 @@ namespace Masini
             masini[masini.Count - 1].id = masini.Count;
             noua.id = masini.Count;
         }
+        public void Sold(masina sterge)
+        {
+            masini.RemoveAt(sterge.id-1);
+        }
         public void addFile(masina M)
         {
             masini.Add(M);
@@ -32,20 +36,6 @@ namespace Masini
         public void modify(masina Modificat, int id)
         {
             masini[id - 1] = Modificat;
-        }
-        public void compare()
-        {
-            //bool verificare;
-            int masina1=0, masina2=0;
-            //verificare=show();
-           // if (verificare == false)
-              //  return;
-            Console.WriteLine("Introduceti id-ul primei masini\nR:");
-            masina1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Introduceti id-ul  masinei nr 2\nR:");
-            masina2 = Convert.ToInt32(Console.ReadLine());
-            masini[masina1 - 1].afisare();
-            masini[masina1 - 1].afisare();
         }
     }
 }

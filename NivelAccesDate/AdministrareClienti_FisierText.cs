@@ -1,6 +1,7 @@
 ﻿using System;
 using Clienti;
 using Masini;
+using Tranzactii;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
@@ -81,6 +82,14 @@ namespace NivelAccesDate
         public ListaMasini GetMasini()
         {
             throw new Exception("Optiunea GetMasini nu este implementata");
+        }
+        public ListaTranzactii GetTranzactii(ListaMasini masini, ListaClienti clienti)
+        {
+            throw new Exception("Optiunea GetMasini nu este implementata");
+        }
+        public void SaveTranzactii(ListaTranzactii lista)
+        {
+            throw new Exception("Optiunea SaveMasini nu este implementata");
         }
     }
 }

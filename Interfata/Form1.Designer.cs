@@ -36,6 +36,7 @@ namespace Interfata
             this.Add = new System.Windows.Forms.ToolStripMenuItem();
             this.car = new System.Windows.Forms.ToolStripMenuItem();
             this.client = new System.Windows.Forms.ToolStripMenuItem();
+            this.offer = new System.Windows.Forms.ToolStripMenuItem();
             this.edit = new System.Windows.Forms.ToolStripMenuItem();
             this.carE = new System.Windows.Forms.ToolStripMenuItem();
             this.clientE = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +71,6 @@ namespace Interfata
             this.btnActualizare = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.btnTranzactii = new System.Windows.Forms.Button();
-            this.offer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,7 +82,7 @@ namespace Interfata
             this.btnMasina.TabIndex = 0;
             this.btnMasina.Text = "Afisati Masinile de pe stock";
             this.btnMasina.UseVisualStyleBackColor = true;
-            this.btnMasina.Click += new System.EventHandler(this.button1_Click);
+            this.btnMasina.Click += new System.EventHandler(this.btnAdauga_Click);
             // 
             // btnClient
             // 
@@ -106,6 +106,7 @@ namespace Interfata
             this.menuStrip1.Size = new System.Drawing.Size(1250, 33);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "Meniu";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             this.menuStrip1.Click += new System.EventHandler(this.menuStrip1_ItemClicked);
             // 
             // Add
@@ -129,6 +130,12 @@ namespace Interfata
             this.client.Name = "client";
             this.client.Size = new System.Drawing.Size(190, 34);
             this.client.Text = "Client";
+            // 
+            // offer
+            // 
+            this.offer.Name = "offer";
+            this.offer.Size = new System.Drawing.Size(190, 34);
+            this.offer.Text = "Tranzactie";
             // 
             // edit
             // 
@@ -376,12 +383,6 @@ namespace Interfata
             this.btnTranzactii.Text = "Afisati Tranzactiile";
             this.btnTranzactii.UseVisualStyleBackColor = true;
             this.btnTranzactii.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // offer
-            // 
-            this.offer.Name = "offer";
-            this.offer.Size = new System.Drawing.Size(190, 34);
-            this.offer.Text = "Tranzactie";
             // 
             // Form1
             // 

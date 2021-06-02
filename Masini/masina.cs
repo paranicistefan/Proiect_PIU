@@ -25,6 +25,7 @@ namespace Masini
         public bool CriuseControl = false;
         public bool SenzoriParcare = false;
         public bool FariuriAutomate = false;
+        public bool Vandut = false;
 
         public masina(string input)
         {
@@ -48,7 +49,7 @@ namespace Masini
             CriuseControl = Convert.ToBoolean(date[16]);
             SenzoriParcare = Convert.ToBoolean(date[17]);
             FariuriAutomate = Convert.ToBoolean(date[18]);
-
+            Vandut = Convert.ToBoolean(date[18]);
         }
         public masina()
         {
@@ -68,7 +69,7 @@ namespace Masini
         {
             return $"{id};{Fabricant};{Model};{anFabricatie};{Echipare};{Kilometraj};{Pret};" +
                 $"{culoare};{aer};{fuel};{caroserie};{cv};{geamuri};" +
-                $"{OglinziElectrice};{ScauneElectrice};{PachetSport};{CriuseControl};{SenzoriParcare};{FariuriAutomate}";
+                $"{OglinziElectrice};{ScauneElectrice};{PachetSport};{CriuseControl};{SenzoriParcare};{FariuriAutomate};{Vandut}";
         }
     }
 }

@@ -35,8 +35,6 @@ namespace Interfata
             this.txtPrenume = new System.Windows.Forms.TextBox();
             this.lblPrenume = new System.Windows.Forms.Label();
             this.lblNume = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.txtNume = new System.Windows.Forms.TextBox();
             this.txtCNP = new System.Windows.Forms.TextBox();
             this.btnAdaugaClient = new System.Windows.Forms.Button();
@@ -50,7 +48,7 @@ namespace Interfata
             // txtAdresa
             // 
             this.txtAdresa.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAdresa.Location = new System.Drawing.Point(458, 163);
+            this.txtAdresa.Location = new System.Drawing.Point(470, 86);
             this.txtAdresa.Name = "txtAdresa";
             this.txtAdresa.PlaceholderText = "Introduceti adresa dvs";
             this.txtAdresa.Size = new System.Drawing.Size(257, 30);
@@ -61,7 +59,7 @@ namespace Interfata
             // 
             this.lblAdresa.AutoSize = true;
             this.lblAdresa.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblAdresa.Location = new System.Drawing.Point(456, 117);
+            this.lblAdresa.Location = new System.Drawing.Point(468, 40);
             this.lblAdresa.Name = "lblAdresa";
             this.lblAdresa.Size = new System.Drawing.Size(81, 28);
             this.lblAdresa.TabIndex = 19;
@@ -71,7 +69,7 @@ namespace Interfata
             // 
             this.lblCNP.AutoSize = true;
             this.lblCNP.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblCNP.Location = new System.Drawing.Point(35, 296);
+            this.lblCNP.Location = new System.Drawing.Point(47, 219);
             this.lblCNP.Name = "lblCNP";
             this.lblCNP.Size = new System.Drawing.Size(60, 28);
             this.lblCNP.TabIndex = 18;
@@ -80,7 +78,7 @@ namespace Interfata
             // txtPrenume
             // 
             this.txtPrenume.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPrenume.Location = new System.Drawing.Point(35, 248);
+            this.txtPrenume.Location = new System.Drawing.Point(47, 171);
             this.txtPrenume.Name = "txtPrenume";
             this.txtPrenume.PlaceholderText = "Introduceti Prenumele";
             this.txtPrenume.Size = new System.Drawing.Size(257, 30);
@@ -91,7 +89,7 @@ namespace Interfata
             // 
             this.lblPrenume.AutoSize = true;
             this.lblPrenume.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblPrenume.Location = new System.Drawing.Point(33, 206);
+            this.lblPrenume.Location = new System.Drawing.Point(45, 129);
             this.lblPrenume.Name = "lblPrenume";
             this.lblPrenume.Size = new System.Drawing.Size(102, 28);
             this.lblPrenume.TabIndex = 16;
@@ -102,34 +100,16 @@ namespace Interfata
             this.lblNume.AutoSize = true;
             this.lblNume.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblNume.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblNume.Location = new System.Drawing.Point(33, 117);
+            this.lblNume.Location = new System.Drawing.Point(45, 40);
             this.lblNume.Name = "lblNume";
             this.lblNume.Size = new System.Drawing.Size(71, 28);
             this.lblNume.TabIndex = 14;
             this.lblNume.Text = "Nume";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(33, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 67);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Persoana fizica";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(550, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(220, 67);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Firma";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // txtNume
             // 
             this.txtNume.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNume.Location = new System.Drawing.Point(35, 163);
+            this.txtNume.Location = new System.Drawing.Point(47, 86);
             this.txtNume.Name = "txtNume";
             this.txtNume.PlaceholderText = "Introduceti Numele";
             this.txtNume.Size = new System.Drawing.Size(257, 30);
@@ -139,7 +119,7 @@ namespace Interfata
             // txtCNP
             // 
             this.txtCNP.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCNP.Location = new System.Drawing.Point(35, 338);
+            this.txtCNP.Location = new System.Drawing.Point(47, 261);
             this.txtCNP.Name = "txtCNP";
             this.txtCNP.PlaceholderText = "Introduceti CNP-ul";
             this.txtCNP.Size = new System.Drawing.Size(257, 30);
@@ -148,7 +128,7 @@ namespace Interfata
             // 
             // btnAdaugaClient
             // 
-            this.btnAdaugaClient.Location = new System.Drawing.Point(284, 429);
+            this.btnAdaugaClient.Location = new System.Drawing.Point(296, 352);
             this.btnAdaugaClient.Name = "btnAdaugaClient";
             this.btnAdaugaClient.Size = new System.Drawing.Size(230, 53);
             this.btnAdaugaClient.TabIndex = 30;
@@ -159,7 +139,7 @@ namespace Interfata
             // txtSerie
             // 
             this.txtSerie.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSerie.Location = new System.Drawing.Point(458, 248);
+            this.txtSerie.Location = new System.Drawing.Point(470, 171);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.PlaceholderText = "Introduceti Seria de buletin";
             this.txtSerie.Size = new System.Drawing.Size(257, 30);
@@ -170,7 +150,7 @@ namespace Interfata
             // 
             this.lblSerie.AutoSize = true;
             this.lblSerie.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblSerie.Location = new System.Drawing.Point(458, 206);
+            this.lblSerie.Location = new System.Drawing.Point(470, 129);
             this.lblSerie.Name = "lblSerie";
             this.lblSerie.Size = new System.Drawing.Size(143, 28);
             this.lblSerie.TabIndex = 31;
@@ -179,7 +159,7 @@ namespace Interfata
             // txtTelefon
             // 
             this.txtTelefon.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTelefon.Location = new System.Drawing.Point(458, 338);
+            this.txtTelefon.Location = new System.Drawing.Point(470, 261);
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.PlaceholderText = "Introduceti telefonul dvs";
             this.txtTelefon.Size = new System.Drawing.Size(257, 30);
@@ -190,7 +170,7 @@ namespace Interfata
             // 
             this.lblTelefon.AutoSize = true;
             this.lblTelefon.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblTelefon.Location = new System.Drawing.Point(458, 296);
+            this.lblTelefon.Location = new System.Drawing.Point(470, 219);
             this.lblTelefon.Name = "lblTelefon";
             this.lblTelefon.Size = new System.Drawing.Size(87, 28);
             this.lblTelefon.TabIndex = 33;
@@ -201,7 +181,7 @@ namespace Interfata
             this.errLabel.AutoSize = true;
             this.errLabel.Font = new System.Drawing.Font("Sitka Subheading", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.errLabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.errLabel.Location = new System.Drawing.Point(229, 387);
+            this.errLabel.Location = new System.Drawing.Point(241, 310);
             this.errLabel.Name = "errLabel";
             this.errLabel.Size = new System.Drawing.Size(347, 26);
             this.errLabel.TabIndex = 35;
@@ -212,7 +192,7 @@ namespace Interfata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 515);
+            this.ClientSize = new System.Drawing.Size(800, 443);
             this.Controls.Add(this.errLabel);
             this.Controls.Add(this.txtTelefon);
             this.Controls.Add(this.lblTelefon);
@@ -221,8 +201,6 @@ namespace Interfata
             this.Controls.Add(this.btnAdaugaClient);
             this.Controls.Add(this.txtCNP);
             this.Controls.Add(this.txtNume);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtAdresa);
             this.Controls.Add(this.lblAdresa);
             this.Controls.Add(this.lblCNP);
@@ -243,8 +221,6 @@ namespace Interfata
         private System.Windows.Forms.TextBox txtPrenume;
         private System.Windows.Forms.Label lblPrenume;
         private System.Windows.Forms.Label lblNume;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtNume;
         private System.Windows.Forms.TextBox txtCNP;
         private System.Windows.Forms.Button btnAdaugaClient;

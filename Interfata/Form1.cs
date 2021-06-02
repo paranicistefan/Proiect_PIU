@@ -40,7 +40,7 @@ namespace Interfata
             offer.Click += new EventHandler(offer_Click);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAdauga_Click(object sender, EventArgs e)
         {
             listBox.Items.Clear();
             List < masina > listaMasini = Masini.show();
@@ -53,7 +53,8 @@ namespace Interfata
             listBox.Items.Add($"ID   Fabricant\tModel\tanFabricatie\tEchipare\t\tkilometri   \tpret");
             foreach (masina curent in listaMasini)
             {
-                listBox.Items.Add(curent.afisare());
+                if(curent.Vandut==false)
+                    listBox.Items.Add(curent.afisare());
             }
             listBox.Items.Add("-----Selectati o masina pentru a vedea mai multe detalii-------");
             optiune = 3;
@@ -80,13 +81,24 @@ namespace Interfata
         }
         private void clientE_Click(object sender, EventArgs e)
         {
+            if (Masini.show().Count == 0)
+            {
+                MessageBox.Show("Nu ai nici-un client introdus", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             btnClient_Click(0,e);
             listBox.Items.Add("-----Selectati Elementul ce dorit sa fie modificat-------");
             optiune = 1;
         }
         private void carE_Click(object sender, EventArgs e)
         {
-            button1_Click(0, e);
+            if(Masini.show().Count==0)
+            {
+                MessageBox.Show("Nu ai nici-o masina introdusa", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            btnAdauga_Click(0, e);
+            listBox.Items.RemoveAt(listBox.Items.Count - 1);
             listBox.Items.Add("-----Selectati Elementul ce dorit sa fie modificat-------");
             optiune = 2;
         }
@@ -153,12 +165,18 @@ namespace Interfata
                     optiune = 0;
                     return;
                 }
-                Masini.delete(deVanzare);
+                Masini.find(deVanzare.id).Vandut = true;
                 optiune = 0;
                 Data_Tranzactie x = new Data_Tranzactie(deVanzare,Cumparator,Vanzator,Tranzactii);
                 x.ShowDialog();
                 return;
             }
+            if(optiune== 7)
+            {
+                DetaliiMasina x = new DetaliiMasina(Tranzactii.find(listBox.SelectedIndex).Masina);
+                x.ShowDialog();
+            }
+                
         }
 
         private void btnActualizare_Click(object sender, EventArgs e)
@@ -189,7 +207,7 @@ namespace Interfata
                 listBox.Items.Add(curent.afisare());
             }
             listBox.Items.Add("-----Selectati o tranzactie pentru a vedea mai multe detalii-------");
-            optiune = 0;
+            optiune = 7;
         }
         private void offer_Click(object sender, EventArgs e)
         {
@@ -198,11 +216,16 @@ namespace Interfata
                 MessageBox.Show("Nu ai toate datele neceseare pentru efectuarea unei tranzactii","Eroare",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            button1_Click(sender, e);
+            btnAdauga_Click(sender, e);
             listBox.Items.RemoveAt(listBox.Items.Count-1);
             listBox.Items.Add("-----Selectati masina ce va fi vanduta -------");
 
             optiune = 4;
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

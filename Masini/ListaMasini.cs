@@ -17,10 +17,6 @@ namespace Masini
             masini[masini.Count - 1].id = masini.Count;
             noua.id = masini.Count;
         }
-        public void Sold(masina sterge)
-        {
-            masini.RemoveAt(sterge.id-1);
-        }
         public void addFile(masina M)
         {
             masini.Add(M);

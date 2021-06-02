@@ -30,7 +30,7 @@ namespace Tranzactii
         }
         public string scriere_inFisier()
         {
-            return $"{dataTranzactiei};{Masina.id};{Clientul.id};{Vanzator.id};";
+            return $"{dataTranzactiei};{Masina.id};{Clientul.id};{Vanzator.id}";
         }
     }
 }
